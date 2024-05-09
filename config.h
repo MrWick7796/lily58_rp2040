@@ -21,6 +21,9 @@
 // #define EE_HANDS
 // #define SPLIT_HAND_PIN
 
+// Setup Serial USART Half-duplex mode for communication between the two halves. By default this will use PIO0 peripheral. 
+#define SERIAL_USART_TX_PIN GP1
+
 // Setup I2C Driver for OLED.
 // Peripheral I2C0 uses Driver I2CD0; Peripheral I2C1 uses Driver I2CD1.
 // In mcuconf.h, Peripheral I2C1 is enabled, therefore Driver I2CD1 is used.
