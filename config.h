@@ -3,8 +3,6 @@
 #define QUICK_TAP_TERM 0
 #define TAPPING_TERM 100
 
-#define SPLIT_USB_DETECT
-
 // Enable double tap reset button to enter bootloader feature for RP2040. 
 // This feature is intended for standard RP2040 controllers which require 2 buttons (Reset & Boot) to enter bootloader, e.g. Splinky. 
 // Comment out these lines when using RP2040 controllers with single button reset / bootloader circuit, e.g. Sea Picro. 
@@ -14,7 +12,7 @@
 
 // Force master side determination by VBUS (USB voltage) detect method instead of the default USB data detect method. 
 // RP2040 controllers like Splinky and Sea Picro have working VBUS detect on GP19 pin. 
-#undef SPLIT_USB_DETECT
+// #undef SPLIT_USB_DETECT
 #define USB_VBUS_PIN GP19
 
 // Set handedness by EEPROM. 
@@ -27,13 +25,8 @@
 // Setup I2C Driver for OLED.
 // Peripheral I2C0 uses Driver I2CD0; Peripheral I2C1 uses Driver I2CD1.
 // In mcuconf.h, Peripheral I2C1 is enabled, therefore Driver I2CD1 is used.
-#undef I2C_DRIVER
 #define I2C_DRIVER I2CD1
-
-#undef I2C1_SDA_PIN
 #define I2C1_SDA_PIN GP2
-
-#undef I2C1_SCL_PIN
 #define I2C1_SCL_PIN GP3
 
 
