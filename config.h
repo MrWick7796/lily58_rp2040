@@ -1,7 +1,7 @@
 #pragma once
 
 #define QUICK_TAP_TERM 0
-#define TAPPING_TERM 100
+#define TAPPING_TERM 100 
 
 // Enable double tap reset button to enter bootloader feature for RP2040. 
 // This feature is intended for standard RP2040 controllers which require 2 buttons (Reset & Boot) to enter bootloader, e.g. Splinky. 
@@ -28,5 +28,7 @@
 #define I2C_DRIVER I2CD1
 #define I2C1_SDA_PIN GP2
 #define I2C1_SCL_PIN GP3
+
+#define OLED_UPDATE_INTERVAL 10
 
 
