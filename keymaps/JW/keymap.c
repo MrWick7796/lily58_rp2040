@@ -126,6 +126,7 @@ bool oled_task_user(void) {
     
     // Draw image to Oled 
     oled_write_raw_P(image, sizeof(image));
+    
   } else {
     oled_init_user(OLED_ROTATION_180);
    static const char image [] PROGMEM = {
