@@ -15,9 +15,12 @@
 // #undef SPLIT_USB_DETECT
 #define USB_VBUS_PIN GP19
 
-// Set handedness by EEPROM. 
-// #define EE_HANDS
-// #define SPLIT_HAND_PIN
+// Set handedness
+// We are using splinky rp2040 so it has extra gpio pins GP12-GP16....
+// Solder the GP14 (the middle bottom pin on the splinky) to the vcc next to the T key switch on the lily58 pro board for left half
+// and solder the GP14 pin to gnd next to Y key switch for the right half...
+#define SPLIT_HAND_PIN GP14
+// This is much better than using #define EE_HANDS and now same firmware can be used on both halves and it maintains correct half irrespective of usb cable
 
 // Setup Serial USART Half-duplex mode for communication between the two halves. By default this will use PIO0 peripheral. 
 #define SERIAL_USART_TX_PIN GP1
